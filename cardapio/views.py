@@ -1,2 +1,7 @@
 from django.shortcuts import render
-from cardapio.models import Prato
+
+
+def index(request):
+        return render(request, 'index.html')
+
+               
