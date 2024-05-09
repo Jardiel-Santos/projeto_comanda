@@ -12,6 +12,7 @@ class Prato(models.Model):
     fotografia = models.ImageField(upload_to="media/fotos_pratos", blank= False)
     categoria = models.CharField(max_length=20, choices=OPCOES_CATEGORIAS_PRATOS, default='')
 
+    """Remove as fotos da pasta media"""
     def delete(self, *args, **kwargs):
         self.fotografia.delete(save=False)
         super().delete(*args, **kwargs)
@@ -30,9 +31,11 @@ class Bebida(models.Model):
     fotografia = models.ImageField(upload_to="media/fotos_bebidas", blank= False)
     categoria = models.CharField(max_length=20, choices=OPCOES_CATEGORIAS_BEBIDAS, default='')
     
+    """Remove as fotos da pasta media"""
     def delete(self, *args, **kwargs):
         self.fotografia.delete(save=False)
         super().delete(*args, **kwargs)
 
     def __str__(self):
         return self.nome
+     
