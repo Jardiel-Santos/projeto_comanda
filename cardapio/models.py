@@ -9,7 +9,7 @@ class Prato(models.Model):
 
     nome = models.CharField(max_length=50, null= False, blank= False)
     descricao = models.CharField(max_length=100, null= False, blank= False)
-    fotografia = models.ImageField(upload_to="media/fotos_pratos", blank= False)
+    foto = models.ImageField(upload_to="media/fotos_pratos", blank= True)
     categoria = models.CharField(max_length=20, choices=OPCOES_CATEGORIAS_PRATOS, default='')
 
     """Remove as fotos da pasta media"""
@@ -28,7 +28,7 @@ class Bebida(models.Model):
 
     nome = models.CharField(max_length=50, null= False, blank= False)
     descricao = models.CharField(max_length=100, null= False, blank= False)
-    fotografia = models.ImageField(upload_to="media/fotos_bebidas", blank= False)
+    foto = models.ImageField(upload_to="media/fotos_bebidas", blank= False)
     categoria = models.CharField(max_length=20, choices=OPCOES_CATEGORIAS_BEBIDAS, default='')
     
     """Remove as fotos da pasta media"""
