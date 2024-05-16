@@ -12,7 +12,7 @@ class Prato(models.Model):
 
     nome = models.CharField(max_length=50, null= False, blank= False)
     descricao = models.CharField(max_length=100, null= False, blank= False)
-    foto = models.ImageField(upload_to="fotos_pratos", blank= True)
+    foto = models.ImageField(upload_to="fotos_pratos", blank= False)
     categoria = models.CharField(max_length=20, choices=OPCOES_CATEGORIAS_PRATOS, default='')
     valor = models.DecimalField(max_digits=5, decimal_places=2, default=Decimal(0))
 
