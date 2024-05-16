@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cardapio.apps.CardapioConfig',
     'funcionarios.apps.FuncionariosConfig',
+    'django_s3_sqlite',
 ]
 
 MIDDLEWARE = [
