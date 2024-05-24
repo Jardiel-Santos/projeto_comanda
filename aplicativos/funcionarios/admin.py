@@ -1,5 +1,5 @@
 from django.contrib import admin
-from funcionarios.models import Funcionario
+from aplicativos.funcionarios.models import Funcionario
 
 class ListandoGarcons(admin.ModelAdmin):
     list_display = ("nome", "descricao", "categoria")

@@ -1,0 +1,5 @@
+{% if pratos.foto == "" or pratos.foto == null %}
+    <img class="imagem__imagem" src="" alt="bucetuda">
+{% else %}
+    <img class="imagem__imagem" src="{{ pratos.foto.url }}" alt="bucetuda">
+{% endif %}

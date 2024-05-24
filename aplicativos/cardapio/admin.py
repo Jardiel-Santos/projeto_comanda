@@ -1,5 +1,5 @@
 from django.contrib import admin
-from cardapio.models import Prato, Bebida
+from aplicativos.cardapio.models import Prato, Bebida
 
 class ListandoPratos(admin.ModelAdmin):
     list_display = ("nome", "descricao", "foto", "categoria")

@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/styles/style.css' %}">
+    <title>Pedidos</title>
+</head>
+<body>
+    <h1>Pedidos</h1>
+    {% if pratos %}
+        <h3>Pratos</h3>
+        {% for prato in pratos %}
+        <a href="{% url 'imagem' prato.id %}">{{ prato.nome }}</a>
+        {% endfor %}
+    {% else %}
+    {% endif %}
+    {% if bebidas %}
+        <h3>Bebidas</h3>
+        {% for bebida in bebidas %}
+        <p>Nome: {{ bebida.nome }}</p>
+        <p>Descrição: {{ bebida.descricao }}</p>
+        <img src="{{ bebida.foto.url }}" alt="coca">
+        {% endfor %}
+    {% else %}
+    {% endif %}
+    <h3> tem que aparecer aqui  {{ COMANDA.views }}</h3>
+</body>
+</html>

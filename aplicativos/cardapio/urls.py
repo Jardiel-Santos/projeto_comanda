@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
-from cardapio.views import index, cardapio
+from aplicativos.cardapio.views import index, cardapio
 
 urlpatterns = [
     path('',index),

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from cardapio.models import Prato, Bebida
+from aplicativos.cardapio.models import Prato, Bebida
 
 
 def index(request):
