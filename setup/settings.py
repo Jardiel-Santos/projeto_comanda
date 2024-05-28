@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'aplicativos.cardapio.apps.CardapioConfig',
     'aplicativos.funcionarios.apps.FuncionariosConfig',
-    'aplicativos.pedido.apps.PedidoConfig'
+    'aplicativos.pedido.apps.PedidoConfig',
+    'aplicativos.mesas.apps.MesasConfig',
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if mesas %}
+        {% for mesa in mesas %}
+            <p>Numero: {{ mesa.numero }}</p>
+            <p>lugares: {{ mesa.lugares }}</p>
+            <p>Disponivel: {{ mesa.disponivel }}</p>
+        {% endfor %}
+        {% else %}
+    {% endif %}
+</body>
+</html>

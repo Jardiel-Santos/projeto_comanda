@@ -7,6 +7,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('aplicativos.cardapio.urls')),
     path('', include('aplicativos.pedido.urls')),
+    path('', include('aplicativos.mesas.urls'))
 ]
 
 
