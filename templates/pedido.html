@@ -22,7 +22,7 @@
         {% for bebida in bebidas %}
         <p>Nome: {{ bebida.nome }}</p>
         <p>Descrição: {{ bebida.descricao }}</p>
-        <img src="{{ bebida.foto.url }}" alt="coca">
+        <img src="{{ bebida.foto.url }}" alt="">
         {% endfor %}
     {% else %}
     {% endif %}

@@ -8,9 +8,7 @@
 <body>
     {% if mesas %}
         {% for mesa in mesas %}
-            <p>Numero: {{ mesa.numero }}</p>
-            <p>lugares: {{ mesa.lugares }}</p>
-            <p>Disponivel: {{ mesa.disponivel }}</p>
+            <a href="{% url 'mesa_id' mesa.id %}">Numero: {{ mesa.numero }}</a>
         {% endfor %}
         {% else %}
     {% endif %}
