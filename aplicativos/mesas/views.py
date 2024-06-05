@@ -8,6 +8,6 @@ def mesas(request):
     mesas = Mesa.objects.all()
     return render(request, 'mesas.html', {"mesas": mesas})
 
-def mesa_id(request, mesa_id):
-    mesa_id = get_object_or_404(Mesa, pk=mesa_id)
-    return render(request, 'mesa_id.html', {"mesas": mesa_id})
+def mesa_numero(request, mesa_id):
+    mesa_numero = get_object_or_404(Mesa, pk=mesa_id)
+    return render(request, 'mesa_id.html', {"mesas": mesa_numero })

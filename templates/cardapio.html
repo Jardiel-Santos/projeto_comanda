@@ -9,6 +9,11 @@
     <title>Cardapio</title>
 </head>
 <body>
+    <header>
+        <a href="http://localhost:8000/admin"="button">Admin</a>
+        <a href="{% url 'cardapio' %}">cardapio</a>
+        <a href="{% url 'mesas' %}">mesas</a>
+    </header>
     <h1>Cardapio</h1>
     {% if pratos %}
         <h3>Pratos</h3>

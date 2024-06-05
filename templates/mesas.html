@@ -6,9 +6,14 @@
     <title>Document</title>
 </head>
 <body>
+    <header>
+        <a href="http://localhost:8000/admin"="button">Admin</a>
+        <a href="{% url 'cardapio' %}">cardapio</a>
+        <a href="{% url 'mesas' %}">mesas</a>
+    </header>
     {% if mesas %}
         {% for mesa in mesas %}
-            <a href="{% url 'mesa_id' mesa.id %}">Numero: {{ mesa.numero }}</a>
+            <a href="{% url 'mesa_numero' mesa.id %}">Numero: {{ mesa.numero }}</a>
         {% endfor %}
         {% else %}
     {% endif %}

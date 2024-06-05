@@ -9,20 +9,28 @@
     <title>Pedidos</title>
 </head>
 <body>
+    <header>
+        <a href="http://localhost:8000/admin"="button">Admin</a>
+        <a href="{% url 'cardapio' %}">cardapio</a>
+        <a href="{% url 'mesas' %}">mesas</a>
+    </header>
     <h1>Pedidos</h1>
     {% if pratos %}
         <h3>Pratos</h3>
         {% for prato in pratos %}
-        <a href="{% url 'imagem' prato.id %}">{{ prato.nome }}</a>
+        <a href="{% url 'imagem_prato' mesas.id prato.id %}">{{ prato.nome }}</a>
         {% endfor %}
     {% else %}
     {% endif %}
+
     {% if bebidas %}
+        
         <h3>Bebidas</h3>
         {% for bebida in bebidas %}
-        <p>Nome: {{ bebida.nome }}</p>
+        <a href="{% url 'imagem_bebida' bebida.id %}">{{ bebida.nome }}</a>
+        <!-- <p>Nome: {{ bebida.nome }}</p>
         <p>Descrição: {{ bebida.descricao }}</p>
-        <img src="{{ bebida.foto.url }}" alt="">
+        <img src="{{ bebida.foto.url }}" alt=""> -->
         {% endfor %}
     {% else %}
     {% endif %}

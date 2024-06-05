@@ -1,5 +1,19 @@
 {% if pratos.foto == "" or pratos.foto == null %}
     <img class="imagem__imagem" src="" alt="bucetuda">
 {% else %}
-    <img class="imagem__imagem" src="{{ pratos.foto.url }}" alt="bucetuda">
+    <img class="imagem__imagem" src="{{ pratos.foto.url }}" alt="bucetuda apertada">
 {% endif %}
+
+{% if bebidas.foto == "" or bebidas.foto == null %}
+    <img class="imagem__imagem" src="" alt="bucetuda">
+{% else %}
+    <img class="imagem__imagem" src="{{ bebidas.foto.url }}" alt="bucetuda larga">
+{% endif %}
+
+
+
+<form action="{% url 'adicionar_a_comanda' mesas.id pratos.id %}" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="adicionar"> 
+   
+</form>

@@ -6,13 +6,26 @@
     <title>Document</title>
 </head>
 <body>
+    <header>
+        <a href="http://localhost:8000/admin"="button">Admin</a>
+        <a href="{% url 'cardapio' %}">cardapio</a>
+        <a href="{% url 'mesas' %}">mesas</a>
+    </header>
+    
     <p>Numero: {{ mesas.numero }}</p>
     <p>lugares: {{ mesas.lugares }}</p>
     <p>Disponivel: {{ mesas.disponivel }}</p>
-    <a href=" {% url 'pedido' %} ">
-        <button>
-            Fazer pedido
-        </button>
+    <h3>comanda</h3>
+    {% for chave, valor in mesas.comanda.items %}
+        <p>{{chave}}: {{valor}}</p>
+    {% endfor %}
+    <p>1: {{ mesas.comanda.values }}</p>
+
+    <button>
+            <a href=" {% url 'pedido' mesas.id %} ">
+                Fazer pedido
+       
+    </button>
     </a>
 </body>
 </html>
