@@ -16,9 +16,11 @@
     <p>lugares: {{ mesas.lugares }}</p>
     <p>Disponivel: {{ mesas.disponivel }}</p>
     <h3>comanda</h3>
-    {% for chave, valor in mesas.comanda.items %}
+    <!-- {% for chave, valor in mesas.comanda.items %}
         <p>{{chave}}: {{valor}}</p>
-    {% endfor %}
+    {% endfor %} -->
+    <p>  {{ mesas.comanda }}</p>
+    
 
     <button>
             <a href=" {% url 'pedido' mesas.id %} ">
