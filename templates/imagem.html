@@ -1,19 +1,40 @@
-{% if pratos.foto == "" or pratos.foto == null %}
-    <img class="imagem__imagem" src="" alt="bucetuda">
-{% else %}
-    <img class="imagem__imagem" src="{{ pratos.foto.url }}" alt="bucetuda apertada">
-{% endif %}
+{% load static %}
 
-{% if bebidas.foto == "" or bebidas.foto == null %}
-    <img class="imagem__imagem" src="" alt="bucetuda">
-{% else %}
-    <img class="imagem__imagem" src="{{ bebidas.foto.url }}" alt="bucetuda larga">
-{% endif %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">`
+    <link rel="stylesheet" href="{% static '/styles/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    {% if pratos.foto == "" or pratos.foto == null %}
+        <img class="imagem__imagem" src="" alt="">
+    {% else %}
+        <img class="imagem__imagem" src="{{ pratos.foto.url }}" alt="">
+        <form action="{% url 'adicionar_prato_a_comanda' mesas.id pratos.id%}" method="POST">
+            {% csrf_token %}
+            <input type="submit" value="adicionar"> 
+        
+        </form>
+    {% endif %}
+
+    {% if bebidas.foto == "" or bebidas.foto == null %}
+        <img class="imagem__imagem" src="" alt="">
+    {% else %}
+        <img class="imagem__imagem" src="{{ bebidas.foto.url }}" alt="">
+        <form action="{% url 'adicionar_bebida_a_comanda' mesa.id bebidas.id%}" method="POST">
+            {% csrf_token %}
+            <input type="submit" value="adicionar"> 
+            
+        </form>
+    {% endif %}
 
 
 
-<form action="{% url 'adicionar_a_comanda' mesas.id pratos.id %}" method="POST">
-    {% csrf_token %}
-    <input type="submit" value="adicionar"> 
-   
-</form>
+
+</body>
+</html>
+
+

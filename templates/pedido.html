@@ -27,7 +27,7 @@
         
         <h3>Bebidas</h3>
         {% for bebida in bebidas %}
-        <a href="{% url 'imagem_bebida' bebida.id %}">{{ bebida.nome }}</a>
+        <a href="{% url 'imagem_bebida' mesas.id bebida.id %}">{{ bebida.nome }}</a>
         <!-- <p>Nome: {{ bebida.nome }}</p>
         <p>Descrição: {{ bebida.descricao }}</p>
         <img src="{{ bebida.foto.url }}" alt=""> -->
