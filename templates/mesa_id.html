@@ -19,7 +19,6 @@
     {% for chave, valor in mesas.comanda.items %}
         <p>{{chave}}: {{valor}}</p>
     {% endfor %}
-    <p>1: {{ mesas.comanda.values }}</p>
 
     <button>
             <a href=" {% url 'pedido' mesas.id %} ">
