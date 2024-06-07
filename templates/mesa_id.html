@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.6.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.6.1/core.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -16,12 +18,13 @@
     <p>lugares: {{ mesas.lugares }}</p>
     <p>Disponivel: {{ mesas.disponivel }}</p>
     <h3>comanda</h3>
-    <!-- {% for chave, valor in mesas.comanda.items %}
-        <p>{{chave}}: {{valor}}</p>
-    {% endfor %} -->
-    <p>  {{ mesas.comanda }}</p>
-    
 
+    {% for pedido in mesas.comanda %}
+        <p>Nome: {{ pedido.0}}</p>
+        <p>Valor: {{ pedido.1}}</p>
+        <p>Quantidade: {{ quantidade }}</p>
+    {% endfor %}
+    
     <button>
             <a href=" {% url 'pedido' mesas.id %} ">
                 Fazer pedido

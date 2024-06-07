@@ -34,7 +34,8 @@ class Bebida(models.Model):
     descricao = models.CharField(max_length=100, null= False, blank= False)
     foto = models.ImageField(upload_to="fotos_bebidas", blank= False)
     categoria = models.CharField(max_length=20, choices=OPCOES_CATEGORIAS_BEBIDAS, default='')
-   
+    valor = models.DecimalField(max_digits=5, decimal_places=2, default=Decimal(0))
+
     # TESTE DO MONEYFIELD
    
     # valor = MoneyField(
