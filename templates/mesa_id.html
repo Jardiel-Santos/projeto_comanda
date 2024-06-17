@@ -22,7 +22,7 @@
     {% for pedido in mesas.comanda %}
         <p>Nome: {{ pedido.0}}</p>
         <p>Valor: {{ pedido.1}}</p>
-        <p>Quantidade: {{ quantidade }}</p>
+        <p>Quantidade: {{ pedido.2 }}</p>
     {% endfor %}
     
     <button>
