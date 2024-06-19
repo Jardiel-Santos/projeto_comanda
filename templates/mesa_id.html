@@ -26,10 +26,16 @@
     {% endfor %}
     
     <button>
-            <a href=" {% url 'pedido' mesas.id %} ">
-                Fazer pedido
-       
+        <a href=" {% url 'pedido' mesas.id %} ">
+            Fazer pedido
+        </a>
     </button>
-    </a>
+    <button>
+        <a href=" {% url 'limpar_comanda' mesas.id %} ">
+            Limpar comanda
+        </a>
+
+    </button>
+    
 </body>
 </html>

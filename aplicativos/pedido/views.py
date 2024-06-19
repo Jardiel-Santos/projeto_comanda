@@ -24,7 +24,7 @@ def imagem_bebida(request, bebida_id, mesa_id):
 
 def adicionar_prato_a_comanda(request, prato_id, mesa_id):
         prato = Prato.objects.get(id=prato_id)
-        quantidade = 5
+        quantidade = request.POST.get('quantidade')
         Mesa.comanda.append((prato.nome, prato.valor, quantidade))
         return redirect('mesa_numero', mesa_id)
 
@@ -32,4 +32,8 @@ def adicionar_bebida_a_comanda(request, bebida_id, mesa_id):
         bebida = Bebida.objects.get(id=bebida_id)
         quantidade = request.POST.get('quantidade')
         Mesa.comanda.append((bebida.nome, bebida.valor, quantidade))
+        return redirect('mesa_numero', mesa_id)
+
+def limpar_comanda(request, mesa_id ):
+        Mesa.comanda.clear()
         return redirect('mesa_numero', mesa_id)

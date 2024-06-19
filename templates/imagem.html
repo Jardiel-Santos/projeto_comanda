@@ -13,10 +13,10 @@
         <img class="imagem__imagem" src="" alt="">
     {% else %}
         <img class="imagem__imagem" src="{{ pratos.foto.url }}" alt="">
-        <form action="{% url 'adicionar_prato_a_comanda' mesas.id pratos.id%}" method="POST">
+        <form action="{% url 'adicionar_prato_a_comanda' mesas.id pratos.id %}" method="POST">
             {% csrf_token %}
             <input type="submit" value="adicionar"> 
-            <input type="number" value="1" id="">
+            <input type="number" value="1" name="quantidade">
         </form>
     {% endif %}
 
@@ -26,8 +26,8 @@
         <img class="imagem__imagem" src="{{ bebidas.foto.url }}" alt="">
         <form action="{% url 'adicionar_bebida_a_comanda' mesa.id bebidas.id %}" method="POST">
             {% csrf_token %}
-            <input type="number" value= 1 id="quantidade">
             <input type="submit" value="adicionar"> 
+            <input type="number" value="1" name="quantidade">
         </form>
     {% endif %}
 
