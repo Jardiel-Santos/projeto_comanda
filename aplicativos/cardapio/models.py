@@ -14,7 +14,8 @@ class Prato(models.Model):
     descricao = models.CharField(max_length=150, null= False, blank= False)
     foto = models.ImageField(upload_to="fotos_pratos", blank= False)
     categoria = models.CharField(max_length=20, choices=OPCOES_CATEGORIAS_PRATOS, default='')
-    valor = models.DecimalField(max_digits=5, decimal_places=2, default=Decimal(0))
+    #valor = models.DecimalField(max_digits=5, decimal_places=2, default=Decimal(0))
+    valor = models.IntegerField()
     
     """Remove as fotos da pasta media"""
     def delete(self, *args, **kwargs):

@@ -7,7 +7,7 @@
     <script type="module" src="https://pyscript.net/releases/2024.6.1/core.js"></script>
     <title>Document</title>
 </head>
-<body>
+<body class="itensComanda">
     <header>
         <a href="http://localhost:8000/admin"="button">Admin</a>
         <a href="{% url 'cardapio' %}">cardapio</a>
@@ -23,6 +23,8 @@
         <p>Nome: {{ pedido.0}}</p>
         <p>Valor: {{ pedido.1}}</p>
         <p>Quantidade: {{ pedido.2 }}</p>
+        <p>Total: {{ pedido.3 }}</p>
+        <p>Total Final: {{ pedido.4 }}</p>
     {% endfor %}
     
     <button>
