@@ -11,6 +11,5 @@ urlpatterns = [
     path('adicionar_prato_a_comanda/<int:mesa_id>/<int:prato_id>', adicionar_prato_a_comanda, name= 'adicionar_prato_a_comanda'),
     path('adicionar_bebida_a_comanda/<int:mesa_id>/<int:bebida_id>', adicionar_bebida_a_comanda, name= 'adicionar_bebida_a_comanda'),
     path('limpar_comanda/<int:mesa_id>', limpar_comanda, name='limpar_comanda'),
-    # path('somar_valores/<int:mesa_id>', somar_valores, name='somar_valores'),
 ]
 

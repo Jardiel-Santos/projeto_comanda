@@ -23,9 +23,11 @@
         <p>Nome: {{ pedido.0}}</p>
         <p>Valor: {{ pedido.1}}</p>
         <p>Quantidade: {{ pedido.2 }}</p>
-        <p>Total: {{ pedido.3 }}</p>
-        <p>Total Final: {{ pedido.4 }}</p>
     {% endfor %}
+
+    <p>Total da Comanda: {{ total }}</p>
+
+
     
     <button>
         <a href=" {% url 'pedido' mesas.id %} ">
